@@ -1,0 +1,3 @@
+<linker>
+  <assembly fullname="AppleLogin.Runtime" preserve="all" />
+</linker>

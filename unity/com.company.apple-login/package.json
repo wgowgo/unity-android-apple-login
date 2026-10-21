@@ -1,0 +1,16 @@
+{
+  "name": "com.company.apple-login",
+  "version": "1.0.0",
+  "displayName": "Apple Login",
+  "description": "Firebase 없이 Unity Android에서 Sign in with Apple 웹 로그인을 사용하는 SDK.",
+  "unity": "2022.3",
+  "license": "MIT",
+  "dependencies": {},
+  "samples": [
+    {
+      "displayName": "Login Sample",
+      "description": "로그인, 세션 복원, 로그아웃 버튼이 있는 샘플.",
+      "path": "Samples~/LoginSample"
+    }
+  ]
+}

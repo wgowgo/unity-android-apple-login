@@ -1,0 +1,13 @@
+{
+  "name": "unity-apple-login",
+  "private": true,
+  "description": "Unity Android Sign in with Apple plugin and authentication backend.",
+  "scripts": {
+    "test": "npm test --prefix backend",
+    "backend:install": "npm install --prefix backend",
+    "backend:start": "npm run start:memory --prefix backend",
+    "backend:build": "npm run build --prefix backend",
+    "backend:check-apple": "npm run check:apple --prefix backend",
+    "android:aar": "bash scripts/build-aar.sh"
+  }
+}

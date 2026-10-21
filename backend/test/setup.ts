@@ -1,0 +1,10 @@
+process.env.NODE_ENV = 'test';
+process.env.DATA_STORE = 'memory';
+process.env.REDIS_URL = 'memory://';
+process.env.APPLE_MOCK = 'true';
+process.env.JWT_SECRET = 'test-jwt-secret-must-be-32-chars!!';
+process.env.PUBLIC_BASE_URL = 'http://localhost:3000';
+process.env.APPLE_SERVICES_ID = 'com.company.login';
+process.env.ANDROID_PACKAGE_NAME = 'com.company.game';
+process.env.DATA_ENCRYPTION_KEY = Buffer.alloc(32, 7).toString('base64');
+process.env.RATE_LIMIT_MAX = '100';

@@ -1,0 +1,2 @@
+-keep class com.company.applelogin.AppleLoginBridge { *; }
+-keep class com.company.applelogin.AppleAuthCallbackActivity { *; }

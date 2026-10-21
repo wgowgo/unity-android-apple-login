@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<title>apple</title>
+<p id="message"></p>
+<script>
+const fragmentParameters = new URLSearchParams(location.hash.charAt(0) === "#" ? location.hash.slice(1) : "");
+const appleError = fragmentParameters.get("error");
+const identityToken = fragmentParameters.get("id_token");
+const loginState = fragmentParameters.get("state");
+let appReturnUrl = "";
+if (appleError) appReturnUrl = "applelogin://complete?error=" + encodeURIComponent(appleError);
+else if (identityToken) {
+  appReturnUrl = "applelogin://complete?id_token=" + encodeURIComponent(identityToken);
+  if (loginState) appReturnUrl += "&state=" + encodeURIComponent(loginState);
+}
+const messageElement = document.getElementById("message");
+if (!appReturnUrl) messageElement.textContent = "missing id_token";
+else {
+  const openLink = document.createElement("a");
+  openLink.href = appReturnUrl;
+  openLink.textContent = "open";
+  messageElement.appendChild(openLink);
+  location.replace(appReturnUrl);
+}
+</script>
